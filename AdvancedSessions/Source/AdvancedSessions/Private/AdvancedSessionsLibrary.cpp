@@ -61,6 +61,12 @@ void UAdvancedSessionsLibrary::GetSessionID_AsString(const FBlueprintSessionResu
 	SessionID.Empty();
 }
 
+void UAdvancedSessionsLibrary::GetSessionHostUserName_AsString(const FBlueprintSessionResult & SessionResult, FString& HostUserName)
+{
+	const FString OwningUserName = SessionResult.OnlineResult.Session.OwningUserName;
+	HostUserName = OwningUserName;
+}
+
 void UAdvancedSessionsLibrary::GetCurrentSessionID_AsString(UObject* WorldContextObject, FString& SessionID)
 {
 	UWorld* const World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull);

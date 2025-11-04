@@ -78,6 +78,9 @@ public:
 		// Get a string copy of a session ID
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|SessionInfo")
 		static void GetSessionID_AsString(const FBlueprintSessionResult & SessionResult, FString& SessionID);
+	
+		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|SessionInfo")
+		static void GetSessionHostUserName_AsString(const FBlueprintSessionResult & SessionResult, FString& HostUserName);
 
 		// Get a string copy of the current session ID
 		UFUNCTION(BlueprintPure, Category = "Online|AdvancedSessions|SessionInfo", meta = (WorldContext = "WorldContextObject"))
